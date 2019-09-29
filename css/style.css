@@ -1,0 +1,295 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  /*coded */
+  display: inline-block;
+  padding-right: 20px;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; /*coded*/;
+}
+
+nav a:hover{
+  text-decoration: underline;  /*coded*/;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /*coded*/
+  top: -40px;     /*coded*/
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus{
+/*Add the selector and rule to move the skip link to the exact top.*/
+	left: 0;
+	top: 0;
+}
+
+a:focus{
+	border: 2px solid black;
+}
+
+input:focus{
+	border: 2px solid black;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  /*Goes to the end of the page without having the know/specifty the number of columns*/
+  grid-row: 7 / auto;   /*grid-row: 7/8*/
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+.container{
+
+  /*coded  */
+  display: grid;
+  grid-template-columns: 100px 500px 100px;
+  grid-row-gap: 15px;
+
+  /*Provided*/
+  grid-template-rows: 30px auto auto auto auto auto 100px; 
+  width: 100vw; 
+}
+
+.nav{
+   /*coded*/
+  grid-column: 1 / 4;
+  grid-row: 1 /2;
+  text-align: right;
+  vertical-align: middle;
+  /*Provided*/
+  background-color: #ddd;
+  padding: 20px 0; 
+  text-align: left; 
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/header.jpg");      /*coded*/
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+
+  /*coded*/
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.about-image{
+  /*Your code here */
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  overflow: hidden;
+  max-height: 700px;
+
+}
+
+.about{
+  /*Your code here */
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.method-image{
+  /*Your code here */
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.method{
+    /*coded*/
+    grid-column: 2 / 3;
+  	grid-row: 4 / 5;
+}
+
+.clients-image{
+ /*Your code here */
+  grid-column: 1 / 4;
+  grid-row: 5 / 6;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.clients{
+ /*Your code here */
+ grid-column: 2 / 3;
+ grid-row: 5 / 6;
+}
+
+.contact-image{
+   /*Your code here */
+   grid-column: 1 / 4;
+  grid-row: 6 / 7;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.contact{
+   /*Your code here */
+   grid-column: 2 / 3;
+  	grid-row: 6 / 7;
+}
+
+.text-block{
+
+   /*coded */
+  align-self: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+  .container{
+    /*coded*/
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+    grid-template-columns: 50px auto 500px auto 50px;
+  }
+
+  .nav{
+    background-color: #ddd;
+
+     /*coded*/
+     text-align: right;
+     vertical-align: middle;
+     padding-top: 35px;
+     padding-bottom: 35px;
+     grid-column: 1 / 6;
+  	 grid-row: 1 /2;
+
+  }
+
+  .about-image{
+     /*coded */
+    grid-column: 2 / 4;
+  	grid-row: 3 / 4;
+  	overflow: hidden;
+  	max-height: 700px;
+    }
+
+  .about{
+    /*coded*/
+    grid-column: 3 / 5;
+  	grid-row: 3 / 4;
+
+  }
+
+  .method-image{
+    /*Your code here */
+    grid-column: 3 / 5;
+  	grid-row: 4 / 5;
+  	overflow: hidden;
+  	max-height: 700px;
+  }
+
+  .method{
+    /*Your code here */
+    grid-column: 2 / 4;
+  	grid-row: 4 / 5;
+  }
+
+  .clients-image{
+    /*Your code here */
+    grid-column: 2 / 4;
+  	grid-row: 5 / 6;
+  	overflow: hidden;
+  	max-height: 700px;
+
+  }
+
+  .clients{
+    /*Your code here */
+    grid-column: 3 / 5;
+  	grid-row: 5 / 6;
+  }
+
+  .contact-image{
+    /*Your code here */
+    grid-column: 3 / 5;
+  	grid-row: 6 / 7;
+  	overflow: hidden;
+  	max-height: 700px;
+  }
+
+  .contact{
+    /*Your code here */
+    grid-column: 2 / 4;
+  	grid-row: 6 / 7;
+   }
+
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: all 0s ease 0s/* coded- set to default setting */
+    transition: all 0s ease 0s /* coded - set to default setting */
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
