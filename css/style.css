@@ -27,7 +27,7 @@ nav ul{
 }
 
 nav li{
-  /*coded */
+  /*Your code here */
   display: inline-block;
   padding-right: 20px;
 }
@@ -35,25 +35,25 @@ nav li{
 nav a{
   color: black;
   font-weight: bold;
-  text-decoration: none; /*coded*/;
+  text-decoration: none; /*remove the underline*/;
 }
 
 nav a:hover{
-  text-decoration: underline;  /*coded*/;
+  text-decoration: underline;  /*add the underline*/;
 }
 
 .skip a{
   background: white;
   left: 0;
   padding: 6px;
-  position: absolute; /*coded*/
-  top: -40px;     /*coded*/
+  position: absolute; /*position relative to the parent*/
+  top: -40px;     /*place 40px higher*/
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
 }
 
-.skip a:focus{
+.skip a:focus/*Your code here*/{
 /*Add the selector and rule to move the skip link to the exact top.*/
 	left: 0;
 	top: 0;
@@ -71,7 +71,7 @@ input:focus{
 footer{
   background-color: black;
   color: white;
-  grid-column: 1 / -1;  /*Goes to the end of the page without having the know/specifty the number of columns*/
+  grid-column: 1 / -1;  /*From 1 to the end of the page*/
   grid-row: 7 / auto;   /*grid-row: 7/8*/
   padding-top: 30px;
   text-align: center;
@@ -80,7 +80,7 @@ footer{
 
 .container{
 
-  /*coded  */
+  /*Your code here  */
   display: grid;
   grid-template-columns: 100px 500px 100px;
   grid-row-gap: 15px;
@@ -91,7 +91,7 @@ footer{
 }
 
 .nav{
-   /*coded*/
+   /*Your code here */
   grid-column: 1 / 4;
   grid-row: 1 /2;
   text-align: right;
@@ -104,14 +104,14 @@ footer{
 
 header{
   background-attachment: fixed; /* Parallax effect */
-  background-image: url("../images/header.jpg");      /*coded*/
+  background-image: url("../images/header.jpg");      /*Link to header.jpg in the images folder*/
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 400px;                /* Parallax effect */
 
-  /*coded*/
+  /*cover the entire row*/
   grid-column: 1 / -1;
   grid-row: 2 / 3;
 }
@@ -182,7 +182,7 @@ header p{
 
 .text-block{
 
-   /*coded */
+   /*Your code here */
   align-self: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, .8);
@@ -195,7 +195,7 @@ header p{
 @media screen and (min-width: 800px) {
 
   .container{
-    /*coded*/
+    /*Your code here */
     grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
     grid-template-columns: 50px auto 500px auto 50px;
   }
@@ -203,7 +203,7 @@ header p{
   .nav{
     background-color: #ddd;
 
-     /*coded*/
+     /*Your code here */
      text-align: right;
      vertical-align: middle;
      padding-top: 35px;
@@ -214,7 +214,7 @@ header p{
   }
 
   .about-image{
-     /*coded */
+     /*Your code here */
     grid-column: 2 / 4;
   	grid-row: 3 / 4;
   	overflow: hidden;
@@ -222,7 +222,7 @@ header p{
     }
 
   .about{
-    /*coded*/
+    /*Your code here */
     grid-column: 3 / 5;
   	grid-row: 3 / 4;
 
@@ -284,8 +284,8 @@ header p{
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: all 0s ease 0s/* coded- set to default setting */
-    transition: all 0s ease 0s /* coded - set to default setting */
+    -webkit-transition: all 0s ease 0s/* set to default setting */
+    transition: all 0s ease 0s /* set to default setting */
     z-index: 1;
   }
 
